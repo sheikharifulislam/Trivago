@@ -1,24 +1,33 @@
 import React from 'react';
+import { useHistory, useLocation } from 'react-router';
+import UseFirebase from '../../customHook/UseFirebase';
 import './login.css';
 
 const Login = () => {
+
+    const {setIsLoading,signInUsingGoogle} = UseFirebase()
+
+    
+    const history = useHistory();
+    const location = useLocation();
+    const redirectUrl = location.state?.from || '/home';
+
+    const handelGoogleLogin = () => {
+        signInUsingGoogle()
+        .then((result) => {
+            history.push(redirectUrl);
+        })
+        .catch((error) => {
+            console.log(error.message);
+        })
+        .finally(() => setIsLoading(false))
+    }
+
     return (
         <div className="login-form-section">
             <div className="login-form-container">
                 <h2>Pleace Login</h2>
-               <div className="login-form">
-                    <form action="">
-                        <div className="form-design">
-                            <input type="email" placeholder="Enter Your Email" required/>
-                        </div>
-                        <div className="form-design">
-                            <input type="password" placeholder="Enter Your Password" required/>
-                        </div>
-                        <div className="form-design">
-                            <input type="submit" value="Login" />
-                        </div>
-                    </form>
-               </div>
+                <button onClick={handelGoogleLogin}>Google Login</button>
             </div>
         </div>
     );

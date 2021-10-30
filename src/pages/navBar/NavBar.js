@@ -1,10 +1,10 @@
 import React,{useState} from 'react';
 import { NavLink,useHistory } from 'react-router-dom';
+import useAuth from '../../customHook/UseAuth';
 import logo from '../../images/logo.png';
 import './navBar.css';
 
 const NavBar = () => {
-
 
     const history = useHistory();
     const [userInfoDisplay, setUserInfoDisplay] = useState('none');
@@ -23,19 +23,21 @@ const NavBar = () => {
         history.push('/acount');
     }
 
-    // const {setIsLoading,logOut,user} = useAuth();
+    const {setIsLoading,logOut,user} = useAuth();
    
 
-    // const signOut = () => {
-    //     setIsLoading(true);
-    //     logOut()
-    //     .then((result) => {
-    //         user({});
-    //         history.push('/home');
-    //     })
-    //     .catch((error) => console.log(error.message))
-    //     .finally(() => setIsLoading(false));
-    // }
+    const signOut = () => {
+        setIsLoading(true);
+        logOut()
+        .then((result) => {
+            user({});
+            history.push('/home');
+        })
+        .catch((error) => console.log(error.message))
+        .finally(() => setIsLoading(false));
+    }
+
+    
 
     const handelMobileMenu = () => {
         if(mobileMenuDisplay === 'none') {
@@ -63,27 +65,36 @@ const NavBar = () => {
                                 <li>
                                     <NavLink to="/home">home</NavLink>
                                 </li>
-                                <li>
-                                    <NavLink to="/my-orders">My Orders</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/manage-all-orders">Manage All Orders</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/add-service">Add New Service</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/register">Register</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/login">Login</NavLink>
-                                </li>
+                                {
+                                    user.email &&
+                                    <li>
+                                        <NavLink to="/my-orders">My Orders</NavLink>
+                                    </li>
+                                }
+                                {
+                                    user.email &&
+                                    <li>
+                                        <NavLink to="/manage-all-orders">Manage All Orders</NavLink>
+                                    </li>
+                                }
+                                {
+                                    user.email &&
+                                    <li>
+                                        <NavLink to="/manage-all-orders">Manage All Orders</NavLink>
+                                    </li>
+                                }                                
+                                {
+                                    !user.email &&
+                                    <li>
+                                        <NavLink to="/login">Login</NavLink>
+                                    </li>
+                                }
                                 <li>
                                     <span className="user-icon" onClick={showUserInfoBox}><i className="fas fa-user"></i></span>
                                     <div className="user-information" style={{display: userInfoDisplay}}>
                                         <ul>
                                             <li onClick={pushAcount}>Acount</li>
-                                            <li>log Out</li>
+                                            <li onClick={signOut}>log Out</li>
                                         </ul>
                                     </div>
                                 </li>                             
