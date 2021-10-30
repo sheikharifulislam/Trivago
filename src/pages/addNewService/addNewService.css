@@ -1,0 +1,102 @@
+.add-new-service-section-title h2 {
+  text-transform: capitalize;
+  font-family: "Cormorant", serif;
+  font-size: 30px;
+  margin: 30px 0 15px 0;
+}
+
+.add-service-area {
+  background-color: #f5f5f5;
+  overflow: hidden;
+  padding: 50px 60px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.add-service-from-design {
+  width: 45%;
+}
+.add-service-from-design label {
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  font-family: "Roboto", sans-serif;
+}
+
+.add-service-from-design input[type="text"],
+.add-service-from-design input[type="number"] {
+  padding: 10px 120px 10px 15px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border: 2px solid #eee;
+  outline: none;
+}
+.add-service-from-design textarea {
+  resize: none;
+  border: 2px solid #eee;
+  padding: 10px 0 0 15px;
+  outline: none;
+}
+
+.add-service-from-design textarea:focus,
+.add-service-from-design input[type="text"]:focus,
+.add-service-from-design input[type="number"]:focus {
+  border: 1px solid blue;
+}
+
+/* .add-service-from-design input[type="file"] {
+  visibility: hidden;
+} */
+
+#file-upload-button {
+  display: block;
+  width: 140px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: 1px solid #000;
+  /* position: relative;
+  top: -21px;
+  left: 0; */
+}
+
+#file-upload-button img {
+  height: 100%;
+}
+
+#file-upload-button small {
+  margin-left: 7px;
+  cursor: pointer;
+}
+
+#add-new-service-button {
+  padding: 12px 30px;
+  position: relative;
+  bottom: -15px;
+  left: 88%;
+  background-color: dodgerblue;
+  color: #fff;
+  border: 1px solid #000;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  cursor: pointer;
+}

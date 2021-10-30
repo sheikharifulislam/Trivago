@@ -1,0 +1,19 @@
+.single-why-choices {
+  width: 22.5%;
+}
+
+.single-why-choices-image img {
+  width: 100px;
+  height: 80px;
+}
+
+.single-why-choices-title h4 {
+  text-transform: capitalize;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  margin: 7px;
+}
+
+.single-why-choices-descripaction p {
+  font-size: 14px;
+}

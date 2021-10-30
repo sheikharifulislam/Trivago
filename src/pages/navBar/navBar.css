@@ -1,0 +1,110 @@
+/* import google font */
+@import url("https://fonts.googleapis.com/css2?family=Allerta&family=Cormorant:wght@500&family=Poppins&family=Roboto&display=swap");
+.header-top {
+  border-bottom: 1px solid #eee;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header-top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+}
+.logo img {
+  width: 100%;
+}
+
+.menu nav > ul {
+  display: flex;
+  list-style: none;
+}
+.menu nav ul li a {
+  display: block;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: "Cormorant", serif;
+  margin: 30px 30px;
+  font-size: 18px;
+  color: #333;
+}
+
+.menu nav ul li .user-icon,
+.menu nav ul li .response-menu-bar {
+  display: block;
+  margin-top: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.user-information {
+  position: absolute;
+  top: 60px;
+  left: 80%;
+  width: 200px;
+  height: 200px;
+  background-color: #333;
+  z-index: 2;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  display: none;
+}
+
+.user-information ul {
+  margin-top: 30px;
+}
+
+.user-information ul li {
+  display: block;
+  padding: 0 20px;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-family: "Roboto Slab", serif;
+  margin-bottom: 20px;
+  cursor: pointer;
+  color: #eee;
+}
+
+.response-menu-bar {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .menu {
+    width: 100%;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    display: none;
+    z-index: 4;
+    background-color: #000;
+  }
+
+  .menu nav ul {
+    flex-direction: column;
+  }
+
+  .menu nav ul li a {
+    color: #fff;
+  }
+
+  .response-menu-bar {
+    display: block;
+  }
+
+  .response-menu-bar li {
+    list-style: none;
+    font-size: 40px;
+    margin-top: -3px;
+  }
+}

@@ -1,0 +1,25 @@
+.Why-Choices-section {
+  margin-top: 100px;
+}
+
+.why-choices-section-title h2 {
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Cormorant", serif;
+  font-size: 40px;
+}
+
+.why-choices-section-title hr {
+  width: 200px;
+  height: 2px;
+  margin: 0 auto;
+  margin-top: 10px;
+  background-color: dodgerblue;
+}
+
+.why-choices-containeer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,30 @@
+.container-fluid {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.inspired-section {
+  margin-top: 50px;
+}
+
+.inspired-section-title h4,
+p {
+  font-family: "Roboto Slab", serif;
+}
+
+.inspired-section-title h4 {
+  font-size: 24px;
+}
+
+.inspired-section-title p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.all-inspired {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

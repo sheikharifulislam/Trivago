@@ -1,0 +1,45 @@
+.service-details-section {
+  margin-top: 50px;
+}
+
+.service-details-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-details-image {
+  width: 45%;
+}
+
+.service-details-image img {
+  width: 100%;
+}
+
+.service-details-into {
+  width: 50%;
+}
+
+.service-name h4 {
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+.service-details p {
+  margin-top: 10px;
+  font-family: "Poppins", sans-serif;
+  line-height: 30px;
+}
+
+.order-now-button button {
+  display: block;
+  margin-top: 10px;
+  padding: 15px 30px;
+  background-color: dodgerblue;
+  color: #fff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}

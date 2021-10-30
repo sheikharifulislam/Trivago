@@ -1,0 +1,50 @@
+.single-inspeired {
+  width: 30%;
+  height: 200px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.single-inspeired .single-insperied-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
+.single-inspeired .single-insperied-image img:hover {
+  transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -o-transform: scale(1.4);
+  cursor: pointer;
+}
+
+.single-inspired-title {
+  width: 100%;
+  height: 50px;
+  background-color: dodgerblue;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.single-inspired-title p {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  margin: 7px 15px 0px 15px;
+}

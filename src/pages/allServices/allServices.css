@@ -1,0 +1,25 @@
+.all-services-section {
+  margin-top: 100px;
+}
+
+.all-services-section-title h2 {
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Cormorant", serif;
+  font-size: 40px;
+}
+
+.all-services-section-title hr {
+  width: 200px;
+  height: 2px;
+  margin: 0 auto;
+  margin-top: 10px;
+  background-color: dodgerblue;
+}
+
+.all-service-container {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
