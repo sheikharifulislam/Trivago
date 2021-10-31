@@ -20,7 +20,7 @@ const WhyChoices = () => {
                     <h2>Why book with Trivago?</h2>
                     <hr />
                 </div>
-                <div className="why-choices-containeer">
+                <div className="why-choices-container">
                     {
                         choicesData.map((choices) => <SingleWhyChoices
                         key={choices.key}

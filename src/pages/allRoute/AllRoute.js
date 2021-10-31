@@ -11,10 +11,11 @@ import Home from '../home/Home';
 import Login from '../login/Login';
 import NavBar from '../navBar/NavBar';
 import ServiceDetails from '../serviceDetails/ServiceDetails';
-import ShippingForm from '../shippingForm/ShippingForm';
 import PrivateRoute from '../../privateRoute/PrivateRoute';
 import Acount from '../acount/Acount';
 import NotFound from '../../pages/notFound/NotFound';
+import MyOrders from '../myorders/MyOrders';
+import ManageAllOrder from '../manageAllOrders/ManageAllOrder';
 
 const AllRoute = () => {
     return (
@@ -32,12 +33,15 @@ const AllRoute = () => {
                         <Route path="/service-details/:serviceId">
                             <ServiceDetails/>
                         </Route>
-                        <PrivateRoute path="/shipping">
-                            <ShippingForm/>    
-                        </PrivateRoute>
+                        <Route path="/my-orders">
+                            <MyOrders/>
+                        </Route>                       
                         <PrivateRoute path="/add-service">
                             <AddNewService/>
                         </PrivateRoute>
+                        <Route path="/manage-all-orders">
+                            <ManageAllOrder/>
+                        </Route>
                         <PrivateRoute path="/acount">
                             <Acount/>
                         </PrivateRoute>                      

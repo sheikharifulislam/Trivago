@@ -1,10 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyD_iMxsvWzAzB8NI4Py7fgREN5Yk4BQqRo",
-  authDomain: "trivago-fa888.firebaseapp.com",
-  projectId: "trivago-fa888",
-  storageBucket: "trivago-fa888.appspot.com",
-  messagingSenderId: "227611364239",
-  appId: "1:227611364239:web:fc0c69599dc519a21219fa"
+  apiKey: "AIzaSyCwBXycuLGKe5_9WiTx4WOWHJEWo0IpArc",
+  authDomain: "trivago-dbd5f.firebaseapp.com",
+  projectId: "trivago-dbd5f",
+  storageBucket: "trivago-dbd5f.appspot.com",
+  messagingSenderId: "122862006201",
+  appId: "1:122862006201:web:6aecc5d29aa3c782f3d068"
   };
 
   export default firebaseConfig;

@@ -1,0 +1,23 @@
+.single-manage {
+  border: 2px solid #eee;
+  padding: 20px 50px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+#confirm-order-buttton {
+  display: block;
+  background-color: dodgerblue;
+  color: #fff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: 1px solid #000;
+  padding: 15px 20px;
+}

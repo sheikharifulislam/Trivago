@@ -28,3 +28,12 @@ p {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 480px) {
+  .all-inspired {
+    flex-direction: column;
+  }
+  .inspired-section {
+    margin-top: 350px;
+  }
+}

@@ -6,7 +6,7 @@ const Subscribe = () => {
     return (
         <section className="subscribe-section">
             <div className="container">
-               <div className="subscribe-containere">
+               <div className="subscribe-container">
                     <div className="subscribe-section-image">
                         <img src={subscribeImage} alt="Image" />
                     </div>

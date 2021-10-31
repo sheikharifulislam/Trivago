@@ -17,3 +17,10 @@
 .single-why-choices-descripaction p {
   font-size: 14px;
 }
+
+@media screen and (max-width: 480px) {
+  .single-why-choices {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -17,9 +17,15 @@
   background-color: dodgerblue;
 }
 
-.why-choices-containeer {
+.why-choices-container {
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+@media screen and (max-width: 480px) {
+  .why-choices-container {
+    flex-direction: column;
+  }
 }

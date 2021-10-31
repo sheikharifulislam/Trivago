@@ -80,7 +80,7 @@ const NavBar = () => {
                                 {
                                     user.email &&
                                     <li>
-                                        <NavLink to="/manage-all-orders">Manage All Orders</NavLink>
+                                        <NavLink to="/add-service">Add Service</NavLink>
                                     </li>
                                 }                                
                                 {

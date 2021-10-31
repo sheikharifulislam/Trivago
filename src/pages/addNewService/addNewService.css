@@ -32,7 +32,8 @@
 
 .add-service-from-design input[type="text"],
 .add-service-from-design input[type="number"] {
-  padding: 10px 120px 10px 15px;
+  width: 80%;
+  padding: 10px 0 10px 15px;
   border-radius: 7px;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
@@ -40,6 +41,17 @@
   -o-border-radius: 7px;
   border: 2px solid #eee;
   outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 .add-service-from-design textarea {
   resize: none;

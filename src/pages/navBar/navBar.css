@@ -83,7 +83,7 @@
   .menu {
     width: 100%;
     position: absolute;
-    top: 65px;
+    top: 45px;
     left: 0;
     display: none;
     z-index: 4;
@@ -106,5 +106,12 @@
     list-style: none;
     font-size: 40px;
     margin-top: -3px;
+  }
+  .user-icon {
+    display: none;
+  }
+  .user-information {
+    color: #fff;
+    display: block;
   }
 }

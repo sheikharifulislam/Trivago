@@ -17,7 +17,7 @@ const AllServices = () => {
                <div className="all-service-container">
                    {
                         allService.map((service) => <SingleService
-                        key={service.key}
+                        key={service._id}
                         service={service}
                         />)
                    }

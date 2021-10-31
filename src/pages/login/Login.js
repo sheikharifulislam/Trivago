@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory, useLocation } from 'react-router';
+import { useHistory, useLocation } from 'react-router-dom';
 import UseFirebase from '../../customHook/UseFirebase';
 import './login.css';
 

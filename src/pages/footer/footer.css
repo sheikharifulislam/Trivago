@@ -60,3 +60,15 @@
 .footer-bottom-menu {
   margin-top: 20px;
 }
+
+@media screen and (max-width: 480px) {
+  .footer-menu ul,
+  .footer-bottom-menu ul {
+    flex-direction: column;
+  }
+
+  .footer-menu ul li,
+  .footer-bottom-menu ul li {
+    margin-top: 10px;
+  }
+}
