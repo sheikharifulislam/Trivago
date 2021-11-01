@@ -20,7 +20,7 @@ const AddNewService = () => {
             time: serviceTime.current.value,
         }
 
-        axios.post('http://localhost:5000/add-service',data)
+        axios.post('https://chilling-barrow-84882.herokuapp.com/add-service',data)
         .then((response) => {
             if(response.data.insertedId) {
                 alert('succefully added');
