@@ -3,14 +3,14 @@ import React from 'react';
 import './singleManage.css';
 
 const SingleManage = (props) => {
-    const {_id,orderStatus,serviceName,servicePrice,} = props.manage;
+    const {_id,orderStatus,serviceName,servicePrice,orderDate,orderTime} = props.manage;
 
     const singleManageStyle = {
         marginTop: '20px',
     }
     
     const handelConfirmOrder = (id) => {
-        axios.patch(`http://localhost:5000/confirm-order/${id}`)
+        axios.patch(`https://chilling-barrow-84882.herokuapp.com/confirm-order/${id}`)
         .then((response) => {
             if(response.data.modifiedCount >= 1) {
                 alert('Confirm Order Successfully');
@@ -30,6 +30,12 @@ const SingleManage = (props) => {
             </div>
             <div className="order-status">
                 <small>Order Status: {orderStatus}</small>
+            </div>
+            <div className="single-manage-order-date">
+                <small>Order Date {orderDate}</small>
+            </div>
+            <div className="single-manage-order-time">
+                <small>Order Time {orderTime}</small>
             </div>
             {
                 orderStatus.toLowerCase() === "pending" &&

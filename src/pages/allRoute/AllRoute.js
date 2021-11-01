@@ -14,8 +14,9 @@ import ServiceDetails from '../serviceDetails/ServiceDetails';
 import PrivateRoute from '../../privateRoute/PrivateRoute';
 import Acount from '../acount/Acount';
 import NotFound from '../../pages/notFound/NotFound';
-import MyOrders from '../myorders/MyOrders';
 import ManageAllOrder from '../manageAllOrders/ManageAllOrder';
+import MyAllOrder from '../myAllOrder/MyAllOrder';
+
 
 const AllRoute = () => {
     return (
@@ -33,18 +34,18 @@ const AllRoute = () => {
                         <Route path="/service-details/:serviceId">
                             <ServiceDetails/>
                         </Route>
-                        <Route path="/my-orders">
-                            <MyOrders/>
-                        </Route>                       
+                        <PrivateRoute path="/my-orders">
+                            <MyAllOrder/>
+                        </PrivateRoute>                       
                         <PrivateRoute path="/add-service">
                             <AddNewService/>
                         </PrivateRoute>
-                        <Route path="/manage-all-orders">
+                        <PrivateRoute path="/manage-all-orders">
                             <ManageAllOrder/>
-                        </Route>
+                        </PrivateRoute>
                         <PrivateRoute path="/acount">
                             <Acount/>
-                        </PrivateRoute>                      
+                        </PrivateRoute>                                          
                         <Route exact path="/login">
                             <Login/>
                         </Route>

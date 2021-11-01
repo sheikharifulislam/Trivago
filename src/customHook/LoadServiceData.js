@@ -6,7 +6,7 @@ const LoadServiceData = () => {
     const [allService, setAllservice] = useState([]);
     
     useEffect(() => {
-        axios.get('http://localhost:5000/all-services')
+        axios.get('https://chilling-barrow-84882.herokuapp.com/all-services')
         .then((response) => setAllservice(response.data))       
         .catch((error) => console.log(error.message));
     }, [])

@@ -7,18 +7,9 @@ import './navBar.css';
 const NavBar = () => {
 
     const history = useHistory();
-    const [userInfoDisplay, setUserInfoDisplay] = useState('none');
+    const [userInfoDisplay, setUserInfoDisplay] = useState(false);    
     const [mobileMenuDisplay, setMobileMenuDisplay] = useState('block');
-
-    const showUserInfoBox = () => {      
-       if(userInfoDisplay === 'none') {
-            setUserInfoDisplay('block');
-       }
-       else {
-            setUserInfoDisplay('none');
-       }
-    }
-
+   
     const pushAcount = () => {
         history.push('/acount');
     }
@@ -90,13 +81,13 @@ const NavBar = () => {
                                     </li>
                                 }
                                 <li>
-                                    <span className="user-icon" onClick={showUserInfoBox}><i className="fas fa-user"></i></span>
-                                    <div className="user-information" style={{display: userInfoDisplay}}>
+                                    <span className="user-icon" onClick={() => setUserInfoDisplay(!userInfoDisplay)}><i className="fas fa-user"></i></span>
+                                    <div className="user-information" style={{display: userInfoDisplay ? 'block' : 'none'}}>
                                         <ul>
                                             <li onClick={pushAcount}>Acount</li>
                                             <li onClick={signOut}>log Out</li>
                                         </ul>
-                                    </div>
+                                    </div>                               
                                 </li>                             
                             </ul>                          
                         </nav>

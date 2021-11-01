@@ -1,0 +1,17 @@
+.single-my-order {
+  padding: 20px 30px;
+  border: 1px solid #eee;
+  margin-bottom: 15px;
+}
+
+.delete-single-my-order button {
+  display: inline-block;
+  padding: 14px 25px;
+  margin-top: 15px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: 1px solid #000;
+}

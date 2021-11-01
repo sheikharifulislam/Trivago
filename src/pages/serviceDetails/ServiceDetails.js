@@ -17,7 +17,7 @@ const ServiceDetails = () => {
     
     
 
-    const details = allService.find((service) => service.key === serviceId);
+    const details = allService.find((service) => service._id === serviceId);
     
     
     const nameRef = useRef();
@@ -27,27 +27,44 @@ const ServiceDetails = () => {
 
     const handelShippingForm = e => {
         e.preventDefault();
+        function getFormateTime() {
+            const now = new Date().toLocaleString();
+        
+            const date = now.split(',')[0].split('/');          
+            const time = now.split(',')[1].split(':');
+            return {
+                date: `${date[1]}/${date[0]}/${date[2]}`,
+                time: `${time[0]}:${time[1]}${time[2].slice(2)}`
+            };
+        }
+
+        const {date} = getFormateTime();
+        const {time} = getFormateTime();
+        
+      
+        
         const data = {
-            userEmail: user.email,
+            userEmail: user.email,            
             orderInfo: {
+                customarName: nameRef.current.value,
+                customarEmail: emailRef.current.value,
+                customarMobile: mobileNumberRef.current.value,
+                customarAddress: addressRef.current.value,
                 serviceId: details?._id,
                 serviceName: details?.placeName,
                 serviceImage: details?.image,
                 serviceTime: details?.time,
                 servicePrice: details?.price,
-            },
-            shippingInfo: {
-                customarName: nameRef.current.value,
-                customarEmail: emailRef.current.value,
-                customarMobile: mobileNumberRef.current.value,
-                customarAddress: addressRef.current.value,
+                orderDate: date,
+                orderTime: time,
+                
             }
             
            
         }      
 
-        axios.post('http://localhost:5000/add-order',data)
-        .then((response) => {
+        axios.post('https://chilling-barrow-84882.herokuapp.com/add-order',data)
+        .then((response) => {            
             if(response.data.insertedId) {
                 alert('Successfully order');
             }
@@ -58,11 +75,14 @@ const ServiceDetails = () => {
                 serviceName: details?.placeName,
                 serviceImage: details?.image,
                 serviceTime: details?.time,
-                servicePrice: details?.price,
+                servicePrice: details?.price,                
                 orderStatus: 'pending',
+                orderDate: date,
+                orderTime: time,
+               
         }
 
-        axios.post('http://localhost:5000/manage-all-orders',orderData);
+        axios.post('https://chilling-barrow-84882.herokuapp.com/manage-add-orders',orderData);
 
         e.target.reset();
     } 

@@ -7,7 +7,7 @@ const ManageAllOrder = () => {
     const [allManageAllOrder, setManageAllOrders] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/manage-all-orders')
+        axios.get('https://chilling-barrow-84882.herokuapp.com/manage-all-orders')
         .then((response) => {
             setManageAllOrders(response.data);
         })

@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import './singleService.css';
 
 const SingleService = (props) => {
-    const {key,image, placeName, time,price} = props.service;
+    const {_id,image, placeName, time,price} = props.service;
 
     const history = useHistory();
 
@@ -12,7 +12,7 @@ const SingleService = (props) => {
     }
 
     return (
-        <div className="single-service-card" onClick={() => pushDetailsPage(key)}>
+        <div className="single-service-card" onClick={() => pushDetailsPage(_id)}>
             <div className="single-services-container">
                 <div className="single-service-image">
                     <img src={image} alt="" />

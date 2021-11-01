@@ -1,10 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyCwBXycuLGKe5_9WiTx4WOWHJEWo0IpArc",
-  authDomain: "trivago-dbd5f.firebaseapp.com",
-  projectId: "trivago-dbd5f",
-  storageBucket: "trivago-dbd5f.appspot.com",
-  messagingSenderId: "122862006201",
-  appId: "1:122862006201:web:6aecc5d29aa3c782f3d068"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGEING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID
   };
 
   export default firebaseConfig;
