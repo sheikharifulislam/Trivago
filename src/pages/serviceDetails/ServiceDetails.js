@@ -1,7 +1,7 @@
 import axios from 'axios';
-import React, {createContext, useRef } from 'react';
+import React, {createContext, useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router';
-import LoadServiceData from '../../customHook/LoadServiceData';
+
 
 import UseAuth from '../../customHook/UseAuth';
 import './serviceDetails.css';
@@ -13,11 +13,17 @@ const ServiceDetails = () => {
     const {serviceId} = useParams();
     const {user} = UseAuth();
 
-    const [allService] = LoadServiceData();
-    
-    
+    const [details, setDetails] = useState({});
 
-    const details = allService.find((service) => service._id === serviceId);
+    useEffect(() => {
+        axios.get(`https://chilling-barrow-84882.herokuapp.com/service-details?serviceId=${serviceId}`)
+        .then((response) => {
+            setDetails(response.data);
+        })
+        .catch((error) => {
+            console.log(error.message);
+        })
+    }, []);
     
     
     const nameRef = useRef();
