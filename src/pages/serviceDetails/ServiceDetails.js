@@ -13,7 +13,7 @@ const ServiceDetails = () => {
     const {user} = UseAuth();
 
     const [details, setDetails] = useState({});
-    const baseUrl = baseurl();
+    const baseUrl = baseurl();    
 
     useEffect(() => {
         axios.get(`${baseUrl}service-details?serviceId=${serviceId}`)
