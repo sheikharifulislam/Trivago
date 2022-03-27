@@ -8,7 +8,7 @@ const Subscribe = () => {
             <div className="container">
                <div className="subscribe-container">
                     <div className="subscribe-section-image">
-                        <img src={subscribeImage} alt="Image" />
+                        <img src={subscribeImage} alt="subscribe banner" />
                     </div>
                     <div className="subscribe-section-into">
                        <div className="subscribe-section-into-container">

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useRef } from 'react';
 import './addNewService.css';
+import baseurl from '../../utlis/baseUrl';
 const AddNewService = () => {
 
     const serviceNameeRef = useRef();
@@ -8,6 +9,8 @@ const AddNewService = () => {
     const serviceDetails = useRef();
     const serviceImageRef = useRef();
     const serviceTime = useRef();
+
+    const baseUrl = baseurl();
 
     const handelAddSubmit = e => {
         
@@ -20,7 +23,7 @@ const AddNewService = () => {
             time: serviceTime.current.value,
         }
 
-        axios.post('https://chilling-barrow-84882.herokuapp.com/add-service',data)
+        axios.post(`${baseUrl}add-service`,data)
         .then((response) => {
             if(response.data.insertedId) {
                 alert('succefully added');

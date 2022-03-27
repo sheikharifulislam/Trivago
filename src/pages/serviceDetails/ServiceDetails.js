@@ -1,10 +1,9 @@
 import axios from 'axios';
 import React, {createContext, useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router';
-
-
 import UseAuth from '../../customHook/UseAuth';
 import './serviceDetails.css';
+import baseurl from '../../utlis/baseUrl';
 
 export const productData = createContext();
 
@@ -14,16 +13,17 @@ const ServiceDetails = () => {
     const {user} = UseAuth();
 
     const [details, setDetails] = useState({});
+    const baseUrl = baseurl();
 
     useEffect(() => {
-        axios.get(`https://chilling-barrow-84882.herokuapp.com/service-details?serviceId=${serviceId}`)
+        axios.get(`${baseUrl}service-details?serviceId=${serviceId}`)
         .then((response) => {
             setDetails(response.data);
         })
         .catch((error) => {
             console.log(error.message);
         })
-    }, []);
+    }, [baseUrl,serviceId]);
     
     
     const nameRef = useRef();
@@ -69,7 +69,7 @@ const ServiceDetails = () => {
            
         }      
 
-        axios.post('https://chilling-barrow-84882.herokuapp.com/add-order',data)
+        axios.post(`${baseUrl()}add-order`,data)
         .then((response) => {            
             if(response.data.insertedId) {
                 alert('Successfully order');
@@ -88,7 +88,7 @@ const ServiceDetails = () => {
                
         }
 
-        axios.post('https://chilling-barrow-84882.herokuapp.com/manage-add-orders',orderData);
+        axios.post(`${baseUrl}manage-add-orders`,orderData);
 
         e.target.reset();
     } 

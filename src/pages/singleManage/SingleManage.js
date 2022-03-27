@@ -1,16 +1,18 @@
 import axios from 'axios';
 import React from 'react';
 import './singleManage.css';
+import baseurl from '../../utlis/baseUrl';
 
 const SingleManage = (props) => {
     const {_id,orderStatus,serviceName,servicePrice,orderDate,orderTime} = props.manage;
+    const baseUrl = baseurl();
 
     const singleManageStyle = {
         marginTop: '20px',
     }
     
     const handelConfirmOrder = (id) => {
-        axios.patch(`https://chilling-barrow-84882.herokuapp.com/confirm-order/${id}`)
+        axios.patch(`${baseUrl}confirm-order/${id}`)
         .then((response) => {
             if(response.data.modifiedCount >= 1) {
                 alert('Confirm Order Successfully');

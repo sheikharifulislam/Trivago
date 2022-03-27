@@ -1,15 +1,17 @@
 import React from 'react';
 import axios from 'axios';
 import './singleMyOrder.css';
+import baseurl from '../../utlis/baseUrl'; 
 
 const SingleMyOrder = (props) => {
     const {serviceName,serviceTime,servicePrice,orderDate,orderTime} = props.singleOrder
     const id = props.id;   
+    const baseUrl = baseurl();
     
     const handerDeleteMyOrder = (e) => {       
        const confirmDelete = window.confirm('Are you sure you want to delete');
        if(confirmDelete) {
-            axios.delete(`https://chilling-barrow-84882.herokuapp.com/delete-my-single-order?orderId=${id}`)
+            axios.delete(`${baseUrl}delete-my-single-order?orderId=${id}`)
             .then((response) => {
                 if(response.data.deletedCount >= 1) {
                     e.target.parentElement.parentElement.remove();                   

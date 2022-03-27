@@ -3,20 +3,22 @@ import React, { useEffect, useState } from 'react';
 import UseAuth from '../../customHook/UseAuth';
 import SingleMyOrder from '../singleMyOrder/SingleMyOrder';
 import './myAllOrder.css';
+import baseurl from '../../utlis/baseUrl';
 
 const MyAllOrder = () => {
     const [myAllOrders, setMyAllOrders] = useState([]);
     const {user} = UseAuth();
+    const baseUrl = baseurl();
 
     useEffect(() => {
-        axios.get(`https://chilling-barrow-84882.herokuapp.com/my-all-orders?userEmailId=${user.email}`)
+        axios.get(`${baseUrl}/my-all-orders?userEmailId=${user.email}`)
         .then((response) => {
             setMyAllOrders(response.data);
         })
         .catch((error) => {
             console.log(error.message);
         })
-    }, []);
+    }, [baseUrl,user.email]);
 
     return (
         <div className="my-all-orders-section">

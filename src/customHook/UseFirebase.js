@@ -35,7 +35,7 @@ const UseFirebase = () => {
  
          return () => unsubscribed;
  
-     }, [])
+     }, [auth])
 
      
     return {       

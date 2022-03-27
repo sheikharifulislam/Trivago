@@ -1,13 +1,15 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import SingleManage from '../singleManage/SingleManage';
+import baseurl from '../../utlis/baseUrl';
 
 const ManageAllOrder = () => {
 
     const [allManageAllOrder, setManageAllOrders] = useState([]);
+    const baseUrl = baseurl();
 
     useEffect(() => {
-        axios.get('https://chilling-barrow-84882.herokuapp.com/manage-all-orders')
+        axios.get(`${baseUrl}/manage-all-orders`)
         .then((response) => {
             setManageAllOrders(response.data);
         })
@@ -15,7 +17,7 @@ const ManageAllOrder = () => {
             console.log(error.message);
         })
         
-    }, [])   
+    }, [baseUrl])   
     
 
     const manageStyle = {
